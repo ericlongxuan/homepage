@@ -402,11 +402,11 @@
 
 
 
-                    <h2 id="press-coverage">Press Coverage</h2>
-                    <p>
+                    <h2 id="press-coverage">Press Coverage</h2> <p>
+                    <div class="press">
                         <div class="mediaitem">
                             <span class="btn btn--primary btnspan">Valley News</span>
-                            <a href="https://www.vnews.com/Mobile-Sensing-Dartmouth-13757746">Dartmouth Computer Scientist at Forefront of Sensing Revolution.</a> November 18, 2017<br><br>
+                            <a href="https://www.vnews.com/Mobile-Sensing-Dartmouth-13757746">Dartmouth Computer Scientist at Forefront of Sensing Revolution.</a> November 18, 2017
                         </div>
 
 			            <div class="mediaitem">
@@ -436,7 +436,7 @@
 
                         <div class="mediaitem">
                             <span class="btn btn--inverse btnspan">Psychiatric Times</span>
-                            <a href="https://www.psychiatrictimes.com/schizophrenia/smartphone-social-behavior-and-relapse-schizophrenia">Smartphone Social Behavior and Relapse in Schizophrenia.</a> May 3, 2019<br><br>
+                            <a href="https://www.psychiatrictimes.com/schizophrenia/smartphone-social-behavior-and-relapse-schizophrenia">Smartphone Social Behavior and Relapse in Schizophrenia.</a> May 3, 2019
                         </div>
 
                         <div class="mediaitem">
@@ -544,22 +544,27 @@
 
                         <div class="mediaitem">
                             <span class="btn btn--primary btnspan">Boston Globe</span>
-                            <a href="https://www.bostonglobe.com/business/2019/07/16/what-makes-you-work-harder-strap-sensor-and-find-out/qc40w4CptMOi8LXDoGFsMN/story.html">What makes you work harder? Strap on a sensor and find out.</a> July 16, 2019<br><br>
+                            <a href="https://www.bostonglobe.com/business/2019/07/16/what-makes-you-work-harder-strap-sensor-and-find-out/qc40w4CptMOi8LXDoGFsMN/story.html">What makes you work harder? Strap on a sensor and find out.</a> July 16, 2019
                         </div>
 
 
 
                         <div class="mediaitem">
                             <span class="btn btn--primary btnspan">The Washington Post</span>
-                            <a href="https://www.washingtonpost.com/local/education/coronavirus-has-made-already-stressed-college-students-even-more-anxious-and-depressed-study-finds/2020/07/24/75608c50-cdb6-11ea-bc6a-6841b28d9093_story.html">Coronavirus has made already-stressed college students even more anxious and depressed, study finds.</a> July 24, 2020<br>
+                            <a href="https://www.washingtonpost.com/local/education/coronavirus-has-made-already-stressed-college-students-even-more-anxious-and-depressed-study-finds/2020/07/24/75608c50-cdb6-11ea-bc6a-6841b28d9093_story.html">Coronavirus has made already-stressed college students even more anxious and depressed, study finds.</a> July 24, 2020
                         </div>
 
-                    </p>
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Science Daily</span>
+                            <a href="https://www.sciencedaily.com/releases/2020/07/200727114731.htm">COVID-19 increased anxiety, depression for already stressed college students.</a> July 27, 2020
+                        </div>
+
+                    </div>
 
 
 
 
-                    <p><br> Last updated: June 2020.</p>
+                    <p><br> Last updated: Augest 2020.</p>
                      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=m&d=PPTzYKXdAc-Uc3_0kZ1M3U9va5Pi3-XeLLCkEhhxWaw&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
 
 <!--                     <a href="https://clustrmaps.com/site/1a1g1" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=080808&w=a&t=n&d=PPTzYKXdAc-Uc3_0kZ1M3U9va5Pi3-XeLLCkEhhxWaw&co=ffffff&ct=808080" /></a> -->
@@ -579,6 +584,12 @@
     </div>
 
     <script src="./js/main.min.js"></script>
+    <script>
+      const lis= document.querySelectorAll(".press>div");
+      for(let i=lis.length-1; i>-1; i--){
+        document.querySelector(".press").appendChild(lis[i]);
+      }
+    </script>
 
 </body>
 
