@@ -1,0 +1,585 @@
+<html lang="en" class=" js ">
+
+<head>
+    <title>Weichen Wang's Homepage</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="">
+    <link href="./css/my.css" rel="stylesheet" type="text/css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script>
+        // $(function() {
+        //     $("#header").load("./part/header.html");
+        // });
+        function ScrollTo(name) {
+          ScrollToResolver(document.getElementById(name));
+        }
+
+        function ScrollToResolver(elem) {
+          var jump = parseInt((elem.getBoundingClientRect().top - 90) * .35);
+          document.body.scrollTop += jump;
+          document.documentElement.scrollTop += jump;
+          if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
+            elem.lastjump = Math.abs(jump);
+            console.log(jump);
+            console.log(elem.getBoundingClientRect().top);
+            setTimeout(function() { ScrollToResolver(elem);}, "25");
+          } else {
+            elem.lastjump = null;
+          }
+        }
+    </script>
+
+</head>
+
+<body class="layout--single" style="margin-bottom: 254px;">
+
+    <div class="masthead">
+        <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                <button><div class="navicon"></div></button>
+                <ul class="visible-links">
+                    <li class="masthead__menu-item masthead__menu-item--lg"><a href="">Weichen Wang's Homepage</a></li>
+                    <li class="masthead__menu-item" onclick="ScrollTo('about-me')"><a>About Me</a></li>
+                    <li class="masthead__menu-item" onclick="ScrollTo('publications')"><a>Publications</a></li>
+                    <li class="masthead__menu-item" onclick="ScrollTo('press-coverage')"><a>Press Coverage</a></li>
+                    <li class="masthead__menu-item"><a href="weichen.pdf">CV</a></li>
+                    <!-- <li class="masthead__menu-item"><a href="">Courses</a></li> -->
+                </ul>
+                <ul class="hidden-links hidden"></ul>
+            </nav>
+        </div>
+        </div>
+    </div>
+
+
+    <div id="main" role="main">
+
+        <div class="sidebar sticky">
+            <div itemscope="" itemtype="https://schema.org/Person">
+
+                <div class="author__avatar">
+                    <img src="./image/weichen.jpeg" class="author__avatar" alt="Weichen Wang" itemprop="image">
+                </div>
+
+
+                <div class="author__content">
+                    <h3 class="author__name" itemprop="name">Weichen Wang</h3>
+
+                    <p class="author__bio" itemprop="description">
+                        PhD student in the department of Computer Science at Dartmouth College
+                    </p>
+                </div>
+
+                <div class="author__urls-wrapper">
+                    <button class="btn btn--inverse">Follow</button>
+                    <ul class="author__urls social-icons" style="display: block;">
+                        <li>
+                            <a href="mailto:wang@cs.dartmouth.edu">
+                                <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i>
+                                Email
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/weichen-cs/" itemprop="sameAs">
+                                <i class="fa fa-fw fa-linkedin" aria-hidden="true"></i>
+                                Linkedin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+<!--                 <div class="up-to-top">
+                    <img src="./image/arrow.png"> Top
+                </div> -->
+
+
+            </div>
+
+
+        </div>
+
+
+        <article class="page" itemscope="" itemtype="https://schema.org/CreativeWork">
+
+            <div class="page__inner-wrap">
+
+                <header>
+
+
+                </header>
+
+
+                <section class="page__content" itemprop="text">
+                    <!-- <h2 id="research-funding-and-projects">About Me</h2> -->
+                    <p id="about-me">
+                        I am a Ph.D. student at the <a href="https://web.cs.dartmouth.edu/" target="_blank">Department of Computer Science</a> at <a href="https://home.dartmouth.edu/" target="_blank">Dartmouth College</a>. I am a member of the <a href="https://dartnets.cs.dartmouth.edu/" target="_blank"> DartNets (Dartmouth Networking and Ubiquitous Systems) Lab</a>, under the supervision of <a href="https://www.cs.dartmouth.edu/~campbell/">Prof. Andrew T. Campbell</a>. <br>
+                        Before joining Dartmouth, I had 3 years industrial experience at <a href="https://www.klab.com/jp/">KLab</a> and <a href="https://www.worksap.co.jp/">Works Applications</a> as a software engineer.
+                        I obtained my Master's degree from <a href="https://www.waseda.jp/top/en">Waseda University</a> under the supervision of <a href="https://scholar.google.com/citations?user=n9L_eXsAAAAJ&hl=en">Prof. Satoshi Goto</a>. I obtained my bachelor's degree in Software Engineering from <a href="https://www.nju.edu.cn/EN/">Nanjing University</a> in China.
+                    </p>
+
+                    <h2 id="research-interests">Research Interests</h2>
+                    <ul>
+                        <li>Human behavioral modeling using data from mobile systems and social networks.</li>
+                        <li>Ubiquitous computing, mobile sensing applied machine learning, mobile health and data mining.</li>
+                        <li>Mobile sensing systems, including apps on iOS and Android platforms, backend and data management.</li>
+                    </ul>
+
+
+
+                    <h2 id="whats-new">What's New</h2>
+                    <ul>
+                    	<li>Jun. 2020: Start my summer intern (Machine Learning track) at <a href="https://about.fb.com/">Facebook! </a></li>
+                    	<li>Jun. 2020: Our paper on <a href="https://www.jmir.org/2020/6/e20185/">Mental Health and Behavior During the Early Phases of the COVID-19 Pandemic </a> accepted by <a href="https://www.jmir.org/">JMIR</a>. Check the <a href="https://www.washingtonpost.com/local/education/coronavirus-has-made-already-stressed-college-students-even-more-anxious-and-depressed-study-finds/2020/07/24/75608c50-cdb6-11ea-bc6a-6841b28d9093_story.html">press article</a> on The Washington Post.</li>
+                    	<li>May. 2020: Our work with <a href="https://www.sandrinermuller.com/">Sandrine Müller</a> and <a href="https://www8.gsb.columbia.edu/cbs-directory/phd/HPeters23">Heinrich Peters</a> featured by
+                    		<a href="https://www.ejp-blog.com/blog/2020/5/11/a-conversation-with-sandrine-mueller-and-heinrich-peters">European Journal of Personality</a>!
+                    	</li>
+                    	<li>Mar. 2020 ~ Jun. 2020: TA the CS65 <a href="https://www.cs.dartmouth.edu/~campbell/cs65/cs65.html">Smartphone Programming</a> in the Computer Science department at Dartmouth College.</li>
+						<li>Jan. 2020: Our paper accepted by Ubicomp'20!</li>
+						<li>Jan. 2020: Paper accepted by CHI'20!</li>
+						<li>Dec. 2019: Our paper accepted by PerCom'20.</li>
+                        <li>Jun. 2019: Start my summer intern at <a href="https://about.att.com/sites/labs_research">AT&T Labs Research! </a></li>
+                        <li>May. 2019: Our paper about using phones and wearables to assess worker performance is accepted by UbiComp'19!</li>
+                        <details>
+						  <summary>See More</summary>
+						  	<li>Sep. 2018 ~ Nov. 2018: TA the CS58 <a href="https://canvas.dartmouth.edu/courses/29009/pages/logistics">Operating Systems</a> in the Computer Science department at Dartmouth College.</li>
+	                        <li>Jul. 2018: Second paper newly accepted by UbiComp'18!</li>
+	                        <li>Feb. 2018: The recruiting and screening website for Mobile RDoC is online!</li>
+	                        <li>Jan. 2018: Our paper accepted by UbiComp'18!</li>
+	                        <li>Oct. 2017: Project kick-off at UW, Seattle (Mobile RDoC, NIH/R01-MH112641-01). The project uses smartphone technology to understand auditory verbal hallucinations.</li>
+	                        <li>Sep. 2017: Launch a new NIH study (NIH/R01-MH059282-12) at Dartmouth. The study will follow a large cohort of participants over their four years of college to assess how changes in self- affect are predicted by relevant brain networks as well as how those networks change over time.</li>
+	                        <li>Sep. 2017: Great time at Ubicomp'17, Maui. Rui presented our work in predicting symptom trajectories of schizophrenia using mobile sensing.</li>
+	                        <li>Jun. 2016: Start to work in the <a href="https://projectreporter.nih.gov/project_info_details.cfm?aid=8640521&icde=18341658">EUREKA NIH project</a> which tries to achieve illness monitoring in schizophrenia from the behavioral data collected by smartphones.</li>
+						</details>
+
+                    </ul>
+
+
+
+                    <h2 id="publications">Publications</h2>
+                    See <a href="https://scholar.google.com/citations?user=-3j053AAAAAJ&hl=en">Google Scholar</a> for my citations and publications.
+
+					<h3>2020</h3>
+					<ol start="21" reversed="true">
+
+
+						<li>
+						    <p>
+								<a href="https://www.jmir.org/2020/6/e20185/"><strong>Mental Health and Behavior During the Early Phases of the COVID-19 Pandemic: A Longitudinal Mobile Smartphone and Ecological Momentary Assessment Study in College Students.</strong></a><br/>
+								Jeremy Huckins, Alex W DaSilva, Weichen Wang, Elin L Hedlund, Courtney Rogers, Subigya K Nepal, Jialing Wu, Mikio Obuchi, Eilis I Murphy, Meghan L Meyer, Dylan D Wagner, Paul E Holtzheimer, Andrew T Campbell. <br/>
+								Journal of Medical Internet Research (JMIR), 2020;22(6):e20185
+								<span class="btn btn--inverse btnspan">SCI</span><span class="btn btn--inverse btnspan">IF 5.0</span>
+						    </p>
+						</li>
+
+						<li>
+						    <p>
+								<span class="btn btn--inverse btnspan">In Press</span>
+								<a href=""><strong>Investigating the relationship between mobility behaviors and subjective well-being using smartphone-based experience sampling and GPS tracking.</strong></a><br/>
+								Müller, S. R.*, Peters, H.*, Matz, S., Wang, W., Harari, G. M. (* contributed equally)<br/>
+								European Journal of Personality, Special Issue: Behavioral Personality Science in the Age of Big Data.
+								<span class="btn btn--inverse btnspan">SSCI</span><span class="btn btn--inverse btnspan">IF 3.5</span>
+						    </p>
+						</li>
+
+
+						<li>
+						    <p>
+								<a href="https://mental.jmir.org/2020/6/e16684/"><strong>Causal Factors of Anxiety and Depression in College Students: Longitudinal Ecological Momentary Assessment and Causal Analysis Using Peter and Clark Momentary Conditional Independence.</strong></a><br/>
+								Jeremy F Huckins, Alex W DaSilva, Elin L Hedlund, Eilis I Murphy, Courtney Rogers, Weichen Wang, Mikio Obuchi, Paul E Holtzheimer, Dylan D Wagner, Andrew T Campbell.<br/>
+								JMIR Mental Health (JMH), 2020;7(6):e16684.
+								<span class="btn btn--inverse btnspan">SCI</span><span class="btn btn--inverse btnspan">IF 3.5</span>
+						    </p>
+						</li>
+
+
+						<li>
+						    <p>
+								<a href="https://dl.acm.org/doi/abs/10.1145/3381001"><strong>Predicting Brain Functional Connectivity Using Mobile Sensing.</strong></a><br/>
+								Mikio Obuchi, Jeremy F Huckins, Weichen Wang, Alex daSilva, Courtney Rogers, Eilis Murphy, Elin Hedlund, Paul Holtzheimer, Shayan Mirjafari, Andrew Campbell. <br/>
+								Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT), March 2020. <br/>
+								To be presented at ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp'20), Cancún, September 2020.
+								<span class="btn btn--inverse btnspan">UBICOMP</span><span class="btn btn--inverse btnspan">CCF A</span>
+						    </p>
+						</li>
+
+
+						<li>
+						    <p>
+			                    <a href="https://dl.acm.org/doi/abs/10.1145/3313831.3376855"><strong>Social Sensing: Assessing Social Functioning of Patients Living with Schizophrenia using Mobile Phone Sensing.</strong></a><br/>
+			                    Weichen Wang, Shayan Mirjafari, Gabriella Harari, Dror Ben-Zeev, Rachel Brain, Tanzeem Choudhury, Marta Hauser, John Kane, Kizito Masaba, Subigya Nepal, Akane Sano, Emily Scherer, Vincent Tseng,
+			                    Rui Wang, Hongyi Wen, Jialing Wu, Andrew Campbell. <br/>
+			                    Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI'20), Honolulu, April. 2020.
+			                    <span class="btn btn--inverse btnspan">CHI</span><span class="btn btn--inverse btnspan">CCF A</span>
+			                </p>
+						</li>
+
+						<li>
+			                <p>
+			                    <a href=".https://ieeexplore.ieee.org/document/9127365"><strong>On Predicting Relapse in Schizophrenia using Mobile Sensing in a Randomized Control Trial.</strong></a><br/>
+			                    Rui Wang, Weichen Wang, Mikio Obuchi, Dror Ben-Zeev, Rachel Brain, Tanzeem Choudhury, Marta Hauser, John Kane, Emily Scherer, Andrew Campbell. <br/>
+			                    2020 IEEE International Conference on Pervasive Computing and Communications (PerCom'20), Austin, March. 2020.
+			                    <span class="btn btn--inverse btnspan">PERCOM</span><span class="btn btn--inverse btnspan">CCF B</span>
+			                </p>
+			            </li>
+			    	</ol>
+
+
+					<h3>2019</h3>
+                    <ol start="15" reversed="true">
+                        <li>
+                            <p>
+                                <a href="./paper/ubicomp19_work.pdf"><strong>Differentiating Higher and Lower Job Performers in the Workplace Using Mobile Sensing.</strong></a><br/>
+                                Shayan Mirjafari, Kizito Masaba, Ted Grover, Weichen Wang, Pino Audia, Andrew T. Campbell, Nitesh V. Chawla et al. <br/>
+                                Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 3, no. 2 (2019): 37.<br/>
+                                Presented at ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp'19), London, September 2019.
+                                <span class="btn btn--inverse btnspan">UBICOMP</span><span class="btn btn--inverse btnspan">CCF A</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="https://doi.org/10.1016/j.jpsychires.2019.06.002"><strong>Capturing behavioral indicators of persecutory ideation using mobile technology.</strong></a><br/>
+                                Benjamin Buck, Kevin A.Hallgren, Emily Scherer, Rachel Brian, Rui Wang, Weichen Wang, Andrew Campbell, Tanzeem Choudhury, Marta Hauser, John M.Kane, Dror Ben-Zeev<br/>
+                                Journal of Psychiatric Research Volume 116, September 2019, Pages 112-117.
+                                <span class="btn btn--inverse btnspan">SCI</span><span class="btn btn--inverse btnspan">IF 4.5</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpspp0000245"><strong>Sensing sociability: Individual differences in young adults’ conversation, calling, texting, and app use behaviors in daily life.</strong></a><br/>
+                                Gabriella M Harari, Sandrine R Müller, Clemens Stachl, Rui Wang, Weichen Wang, Markus Bühner, Peter J Rentfrow, Andrew T Campbell, Samuel D Gosling.<br/>
+                                Journal of Personality and Social Psychology, May 20, 2019.
+                                <span class="btn btn--inverse btnspan">SSCI</span><span class="btn btn--inverse btnspan">IF 5.7</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="https://doi.org/10.1016/j.schres.2019.03.014"><strong>Relationships between smartphone social behavior and relapse in schizophrenia: A preliminary report</strong></a><br/>
+                                Benjamin Buck, Emily Scherer, Rachel Brian, Rui Wang, Weichen Wang, Andrew Campbell, Tanzeem Choudhury, Marta Hauser, John M. Kane, Dror Ben-Zeev.<br/>
+                                Schizophrenia Research, Volume 208, June 2019, Pages 167-172.
+                                <span class="btn btn--inverse btnspan">SCI</span><span class="btn btn--inverse btnspan">IF 4.7</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="https://mhealth.jmir.org/2019/3/e12084/"><strong>Correlates of Stress in the College Environment Uncovered by the Application of Penalized Generalized Estimating Equations to Mobile Sensing Data</strong></a><br/>
+                                Alex W DaSilva, Jeremy F Huckins, Rui Wang, Weichen Wang, Dylan D Wagner, Andrew T Campbell.<br/>
+                                JMIR mHealth and uHealth (JMU), 2019, 7(3): e12084.
+                                <span class="btn btn--inverse btnspan">SCI</span><span class="btn btn--inverse btnspan">IF 4.5</span>
+                            </p>
+                        </li>
+
+
+                        <li>
+                            <p>
+                                <a href="./paper/fnins-13-00248.pdf"><strong>Fusing Mobile Phone Sensing and Brain Imaging to Assess Depression in College Students</strong></a><br/>
+                                Jeremy F. Huckins, Alex W. daSilva, Rui Wang, Weichen Wang, Elin L. Hedlund, Eilis I. Murphy, Richard B. Lopez, Courtney Rogers, Paul E. Holtzheimer, William M. Kelley, Todd F. Heatherton, Dylan D. Wagner, James V. Haxby and Andrew T. Campbell.<br/>
+                                Frontiers in Neuroscience, Volume 13 Page 248, 21 March 2019.
+                                <span class="btn btn--inverse btnspan">SCI</span><span class="btn btn--inverse btnspan">IF 3.6</span>
+                            </p>
+                        </li>
+
+                    </ol>
+
+
+
+                    <h3>2018</h3>
+                    <ol start="9" reversed="true">
+                        <li>
+                            <p>
+                                <a href="./paper/ubicomp18_personality.pdf"><strong>Sensing Behavioral Change Over Time: Using Within-Person Variability Features from Mobile Sensing to Predict Personality Traits</strong></a><br/>
+                                Weichen Wang, Gabriella M. Harari, Rui Wang, Sandrine R. Müller, Shayan Mirjafari, Kizito Masaba and Andrew T. Campbell. <br/>
+                                Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) Volume 3 Issue 2, September 2018.<br/>
+                                Presented at ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp'18), Singapore, October 2018.
+                                <span class="btn btn--inverse btnspan">UBICOMP</span><span class="btn btn--inverse btnspan">CCF A</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="./paper/ubicomp18_depression.pdf"><strong>Tracking Depression Dynamics in College Students Using Mobile Phone and Wearable Sensing</strong></a><br/>
+                                Rui Wang, Weichen Wang, Alex daSilva, Jeremy F. Huckins, William M. Kelley, Todd F. Heatherton, and Andrew T. Campbell. <br/>
+                                Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) Volume 2 Issue 1, March 2018, Article No. 43.<br/>
+                                Presented at ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp'18), Singapore, October 2018.
+                                <span class="btn btn--inverse btnspan">UBICOMP</span><span class="btn btn--inverse btnspan">CCF A</span>
+                            </p>
+                        </li>
+                    </ol>
+
+
+
+
+
+                    <h3>2017</h3>
+                    <ol start="7" reversed="true">
+                        <li>
+                            <p>
+                                <a href="./paper/ubicomp17_bprs.pdf"><strong>Predicting Symptom Trajectories of Schizophrenia using Mobile Sensing</strong></a><br/>
+                                Rui Wang, Weichen Wang, Min Hane Aung, Dror Ben-Zeev, Rachel Brian, Andrew Campbell, Tanzeem Choudhury, Marta Hauser, John Kane, Emily Scherer, Megan Walsh. <br/>
+                                Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) Volume 1 Issue 3, September 2017, Article No. 110. <br/>
+                                Presented at ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp'17), Maui, Sept. 2017.
+                                <span class="btn btn--inverse btnspan">UBICOMP</span><span class="btn btn--inverse btnspan">CCF A</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="./paper/ubicomp17_poster.pdf"><strong>Participants' compliance and experiences with self-tracking using a smartphone sensing app</strong></a><br/>
+                                Gabriella M. Harari, Weichen Wang, Sandrine R. Müller, Rui Wang, Andrew T. Campbell. <br/>
+                                In Proceedings of the 2017 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp'17) and Proceedings of the 2017 ACM International Symposium on Wearable Computers, pp. 57-60. ACM, 2017.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5593755/"><strong>CrossCheck: Integrating Self-Report, Behavioral Sensing, and Smartphone Use to Identify Digital Indicators of Psychotic Relapse</strong></a><br/>
+                                Dror Ben-Zeev, Rachel Brian, Rui Wang, Weichen Wang, Andrew T. Campbell, Min SH Aung, Michael Merrill et al. <br/>
+                                Psychiatric rehabilitation journal 40, no. 3 (2017): 266.
+                                <span class="btn btn--inverse btnspan">SSCI</span><span class="btn btn--inverse btnspan">IF 1.8</span>
+                            </p>
+                        </li>
+                    </ol>
+
+
+                    <h3> 2016 </h3>
+	                <ul>
+                        <li>
+                            <p>
+                                <span class="btn btn--inverse btnspan">Technical Report</span><a href="./paper/SenseFB.pdf"><strong>SenseFB: Linking Facebook Usage to Mental Health Using Mobile Sensing Data</strong></a><br/>
+                                Weichen Wang, Rui Wang, Andrew Campbell.
+                            </p>
+                        </li>
+	                </ul>
+
+
+                    <h3>Before 2015</h3>
+                    <ol start="4" reversed="true">
+                        <li>
+                            <p>
+                                <a href="https://doi.org/10.1109/ISCAS.2015.7169200"><strong>Frame Compatible Format Fast Encoder with Stereo Matching</strong></a><br/>
+                                Wenxin Yu, Weichen Wang, Jiu Xu, Liang Yu. <br/>
+                                IEEE International Symposium on Circuits and Systems (ISCAS'15), pp. 2529-2532. IEEE, 2015.
+                                <span class="btn btn--inverse btnspan">CCF C</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="https://doi.org/10.1109/ICIP.2013.6738658"><strong>Combined Hole-Filling with Spatial and Temporal Prediction</strong></a><br/>
+                                Wenxin Yu, Weichen Wang, Gang He, Satoshi Goto. <br/>
+                                20th IEEE International Conference on Image Processing (ICIP'13), pp. 3196-3200, IEEE, 2013.
+                                <span class="btn btn--inverse btnspan">CCF C</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <a href="https://doi.org/10.1587/transfun.E96.A.1306"><strong>An Integrated Hole-filling Algorithm for View Synthesis</strong></a><br/>
+                                Wenxin Yu, Weichen Wang, Zhengyan Guo and Satoshi Goto. <br/>
+                                IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences 96, no. 6 (2013): 1306-1314.
+                                <span class="btn btn--inverse btnspan">SCI</span>
+                            </p>
+                        </li>
+
+                        <li>
+                             <p>
+                                <a href="https://doi.org/10.1109/ISCAS.2012.6271641"><strong>Stereo Matching with Pixel Classification and Reliable Disparity Propagation</strong></a><br/>
+                                Weichen Wang, Satoshi Goto. <br/>
+                                IEEE International Symposium on Circuits and Systems (ISCAS'12), pp. 1891-1894, IEEE, 2012.
+                                <span class="btn btn--inverse btnspan">CCF C</span>
+                            </p>
+                        </li>
+
+                    </ol>
+
+
+
+
+
+
+                    <h2 id="press-coverage">Press Coverage</h2>
+                    <p>
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">Valley News</span>
+                            <a href="https://www.vnews.com/Mobile-Sensing-Dartmouth-13757746">Dartmouth Computer Scientist at Forefront of Sensing Revolution.</a> November 18, 2017<br><br>
+                        </div>
+
+			            <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">University of Washington</span>
+                            <a href="https://sph.washington.edu/news-events/news/smartphones-may-help-predict-risk-relapse-people-schizophrenia">Smartphones may help predict risk of relapse in people with schizophrenia.</a> April 23, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Daily UW</span>
+                            <a href="http://www.dailyuw.com/wellness/article_8699f7c2-8299-11e9-abca-23eb030fce52.html">Smartphones may help predict relapse in schizophrenia, UW study finds.</a> May 30, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">ASPPH</span>
+                            <a href="https://www.aspph.org/washington-smartphones-may-help-predict-relapse-risk-in-schizophrenia/">Washington: Smartphones May Help Predict Relapse Risk in Schizophrenia.</a> April 25, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Psychiatry Advisor</span>
+                            <a href="https://www.psychiatryadvisor.com/home/schizophrenia-advisor/social-activity-monitoring-through-smartphones-may-predict-relapse-in-schizophrenia/">Social Activity Monitoring Through Smartphones May Predict Relapse in Schizophrenia.</a> May 6, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Psych Congress</span>
+                            <a href="https://www.aspph.org/washington-smartphones-may-help-predict-relapse-risk-in-schizophrenia">Smartphone Logs Have Potential to Predict Relapse in Schizophrenia.</a> April 11, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Psychiatric Times</span>
+                            <a href="https://www.psychiatrictimes.com/schizophrenia/smartphone-social-behavior-and-relapse-schizophrenia">Smartphone Social Behavior and Relapse in Schizophrenia.</a> May 3, 2019<br><br>
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Science Daily</span>
+                            <a href="https://www.sciencedaily.com/releases/2019/06/190624111606.htm">Phones and wearables combine to assess worker performance: Mobile-sensing and consumer tech upgrade the employee review.</a> June 24, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">New Atlas</span>
+                            <a href="https://newatlas.com/smartphone-fitness-tracker-employee-performance/60295/">Smartphones and fitness trackers used to gauge employee performance.</a> June 25, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">India Times</span>
+                            <a href="https://www.indiatimes.com/technology/science-and-future/with-a-fitness-band-and-app-this-guy-built-the-perfect-employee-surveillance-system-369949.html">With A Fitness Band And App, This Guy Built The Perfect Employee Surveillance System.</a> June 26, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Economic Times</span>
+                            <a href="https://economictimes.indiatimes.com/magazines/panache/high-or-low-this-system-evaluates-employee-performance-based-on-physical-emotional-well-being/articleshow/69940595.cms">High or low? This system evaluates employee performance based on physical, emotional well-being.</a> June 25, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">The Weekend Leader</span>
+                            <a href="http://www.theweekendleader.com/Headlines/29889/new-mobile-tool-on-card-to-judge-employee-performance.html">New mobile tool on card to judge employee performance.</a> June 24, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">EurekAlert!</span>
+                            <a href="https://www.eurekalert.org/pub_releases/2019-06/dc-nsu061919.php">Phones and wearables combine to assess worker performance.</a> June 24, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Dartmouth</span>
+                            <a href="https://www.dartmouth.edu/press-releases/phones_and_wearables_combine_to_assess_worker_performance_62419.html">Phones and wearables combine to assess worker performance.</a> June 24, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">cnBeta</span>
+                            <a href="https://www.cnbeta.com/articles/tech/861057.htm">PhoneAgent：利用智能手机和健身追踪设备评估职工表现.</a> June 26, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">The Washington Post</span>
+                            <a href="https://www.washingtonpost.com/technology/2019/06/28/wearable-technology-started-by-tracking-steps-soon-it-may-allow-your-boss-track-your-performance">Wearable technology started by tracking steps. Soon, it may allow your boss to track your performance.</a> June 28, 2019
+                        </div>
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">TechCrunch</span>
+                            <a href="https://techcrunch.com/2019/06/29/researchers-developed-a-sensing-system-to-constantly-track-the-performance-of-workers/">Researchers developed a sensing system to constantly track the performance of workers.</a> June 29, 2019
+                        </div>
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">Financial Times</span>
+                            <a href="https://www.ft.com/content/f8dfe048-982f-11e9-9573-ee5cbb98ed36">The perils and promise of appraisal by smartphone.</a> June 30, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">RetailWire</span>
+                            <a href="https://www.retailwire.com/discussion/can-mobile-sensing-tools-boost-worker-productivity/">Can mobile sensing tools boost worker productivity?</a> July 1, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">TODAYonline</span>
+                            <a href="https://https://www.todayonline.com/commentary/perils-and-promise-staff-appraisal-smartphone/">The perils and promise of staff appraisal by smartphone.</a> July 3, 2019
+                        </div>
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">New Scientist</span>
+                            <a href="https://www.newscientist.com/article/mg24332373-900-your-smartwatch-could-check-if-you-are-being-productive-enough/">Your smartwatch could check if you are being productive enough.</a> July 3, 2019
+                        </div>
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">South China Morning Post</span>
+                            <a href="https://www.scmp.com/lifestyle/gadgets/article/3016958/how-your-work-performance-can-be-monitored-easily-your-health/">How your work performance can be monitored as easily as your health: the future of wearable tech?</a> July 3, 2019
+                        </div>
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--inverse btnspan">Gulf News World</span>
+                            <a href="https://gulfnews.com/world/americas/is-your-boss-tracking-your-fitbit-1.65008593">Is your boss tracking your Fitbit? Wearable technology started by tracking steps; soon it may allow your boss to track you.</a> July 5, 2019
+                        </div>
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">Boston Globe</span>
+                            <a href="https://www.bostonglobe.com/metro/2019/07/08/what-your-boss-knew-how-much-you-slept-last-night/cJVO1fAwfgpD2gArevNmRP/story.html">What if your boss knew how much you slept last night?</a> July 8, 2019
+                        </div>
+
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">Medium OneZero</span>
+                            <a href="https://onezero.medium.com/a-new-study-suggests-employers-track-your-every-move-to-improve-productivity-1b2e5baf6ea7">A New Study Suggests Employers Track Your Every Move to ‘Improve Productivity’</a> July 8, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">Bloomberg</span>
+                            <a href="https://www.bloomberg.com/news/audio/2019-07-10/baystate-business-worker-issues-the-mbta-radio">Baystate Business: Worker Issues, the MBTA (Radio)</a> July 10, 2019
+                        </div>
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">Boston Globe</span>
+                            <a href="https://www.bostonglobe.com/business/2019/07/16/what-makes-you-work-harder-strap-sensor-and-find-out/qc40w4CptMOi8LXDoGFsMN/story.html">What makes you work harder? Strap on a sensor and find out.</a> July 16, 2019<br><br>
+                        </div>
+
+
+
+                        <div class="mediaitem">
+                            <span class="btn btn--primary btnspan">The Washington Post</span>
+                            <a href="https://www.washingtonpost.com/local/education/coronavirus-has-made-already-stressed-college-students-even-more-anxious-and-depressed-study-finds/2020/07/24/75608c50-cdb6-11ea-bc6a-6841b28d9093_story.html">Coronavirus has made already-stressed college students even more anxious and depressed, study finds.</a> July 24, 2020<br>
+                        </div>
+
+                    </p>
+
+
+
+
+                    <p><br> Last updated: June 2020.</p>
+                     <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=m&d=PPTzYKXdAc-Uc3_0kZ1M3U9va5Pi3-XeLLCkEhhxWaw&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+
+<!--                     <a href="https://clustrmaps.com/site/1a1g1" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=080808&w=a&t=n&d=PPTzYKXdAc-Uc3_0kZ1M3U9va5Pi3-XeLLCkEhhxWaw&co=ffffff&ct=808080" /></a> -->
+
+                </section>
+
+            </div>
+
+        </article>
+    </div>
+
+
+    <div class="page__footer">
+        <footer>
+            <div class="page__footer-copyright">© 2020 Weichen Wang's Homepage.</div>
+        </footer>
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
